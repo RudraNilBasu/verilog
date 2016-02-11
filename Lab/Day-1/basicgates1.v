@@ -3,7 +3,7 @@ module test(i1,i2,a1);
 	input i1,i2;
 	output a1;
 
-	assign a1=(i1^i2);
+	assign a1=(i1&i2);
 
 endmodule
 module tg_test(i1,i2,a1);
