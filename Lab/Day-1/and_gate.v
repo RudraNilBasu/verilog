@@ -1,4 +1,3 @@
-// Implementation of And Gate 
 module test(i1,i2,a1);
 	input i1,i2;
 	output a1;
