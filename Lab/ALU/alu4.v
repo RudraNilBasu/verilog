@@ -7,12 +7,6 @@ module alu(a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,x0,x1,x2,x3,clk);
 	begin	
 		if(sel2==0)
 		begin
-			/*
-			x0=a0+b0i;
-			x1=a1+b1;
-			x2=a2+b2;
-			x3=a3+b3;
-			*/
 			// Left Shift
 			x3=1'b0;
 			x2=a3;
@@ -48,7 +42,6 @@ module alu(a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,x0,x1,x2,x3,clk);
 	end
 endmodule
 module ini(a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,x0,x1,x2,x3,clk);
-//reg t,t1;
 	output reg a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,clk;
 	input x0,x1,x2,x3;
 	initial begin
@@ -78,7 +71,6 @@ module ini(a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,x0,x1,x2,x3,clk);
 	
 
 	end
-//end
 endmodule
 module wb;
 	wire a0,a1,a2,a3,b0,b1,b2,b3,sel1,sel2,x0,x1,x2,x3,clk;
