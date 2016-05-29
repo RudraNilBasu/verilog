@@ -1,12 +1,15 @@
 module counter(output reg [3:0] ctr, input clk, input rst);
 	always @(posedge clk)
 	begin
-		ctr<=ctr+1;
+		if(ctr==0)
+			ctr<=4'b1111;
+		else
+			ctr<=ctr-1;
 	end
 	always @(rst)
 	begin
 		if(rst)
-			ctr<=0;
+			ctr=15;
 	end
 endmodule
 module tb(input [3:0] ctr, output reg clk, output reg rst);

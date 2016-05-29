@@ -13,7 +13,7 @@ module test_gen(a,b,carry,sum);
 	input carry,sum;
 	initial begin
 		$dumpfile("halfAdder.vcd");
-		$dumpvars(a,b,carry,sum);
+		$dumpvars(0,a,b,carry,sum);
 		$monitor($time,,,"%b + %b = %b (Sum) %b(Carry)",a,b,sum,carry);
 		a=0;b=0;
 		#5 a=1;b=0;

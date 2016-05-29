@@ -4,8 +4,8 @@ endmodule
 module test_gen(output reg a,b,input c);
 	initial // simulating
 	begin
-		$dumpfile("and.vcd");
-		$dumpvars(a,b,c);
+		$dumpfile("xor.vcd");
+		$dumpvars(0,a,b,c);
 		$monitor($time,,,"a=%b, b=%b, c=%b",a,b,c);
 		a=1;
 		b=0;
